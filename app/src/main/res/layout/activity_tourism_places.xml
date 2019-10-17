@@ -8,8 +8,8 @@
 
     <TextView
             android:id="@+id/textView4"
-            android:layout_width="358dp"
-            android:layout_height="74dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
             android:fontFamily="cursive"
             android:text="Top Visited Places List"
             android:textSize="40sp"
@@ -20,13 +20,15 @@
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintVertical_bias="0.064" />
 
-    <android.recyclerview.widget.RecyclerView
-            android:layout_width="352dp"
-            android:layout_height="172dp"
+    <android.support.v7.widget.RecyclerView
+            android:id="@+id/recyclerView"
+            android:layout_width="match_parent"
+            android:layout_marginTop="20dp"
+            android:layout_height="wrap_content"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.44"
+            app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/textView4"
-            app:layout_constraintVertical_bias="0.0" />
+            app:layout_constraintVertical_bias="0.079" />
 </android.support.constraint.ConstraintLayout>

@@ -1,5 +1,6 @@
 package com.example.locatomatic
 
+import android.content.Intent
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
@@ -35,7 +36,11 @@ class HomePage : AppCompatActivity() {
 
         btnSearch!!.setOnClickListener(object : View.OnClickListener{
             override fun onClick(v: View?) {
-
+                val intent = Intent(this@HomePage, TourismPlaces :: class.java);
+                intent.putExtra("country", country)
+                intent.putExtra("province", province)
+                intent.putExtra("city", city)
+                startActivity(intent)
             }
 
         })
