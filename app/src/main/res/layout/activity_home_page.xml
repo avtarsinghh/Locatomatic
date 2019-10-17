@@ -1,10 +1,75 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout
-        xmlns:android="http://schemas.android.com/apk/res/android"
-        xmlns:tools="http://schemas.android.com/tools"
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
         xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:background="#eeeeee"
         tools:context=".HomePage">
+    <include
+            android:id="@+id/llProgressBar"
+            android:visibility="gone"
+            layout="@layout/progress_loading"/>
+
+    <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="392dp"
+            android:layout_height="140dp"
+            android:background="@drawable/index"
+            android:scaleType="fitXY"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.015" />
+    <Spinner
+            android:id="@+id/countrySpinner"
+            android:layout_width="287dp"
+            android:layout_height="31dp"
+            android:visibility="invisible"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/imageView"
+            app:layout_constraintVertical_bias="0.127"
+            style="@style/spinner_style"/>
+
+    <Spinner
+            android:id="@+id/provinceSpinner"
+            android:layout_width="287dp"
+            android:layout_height="31dp"
+            android:visibility="invisible"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/countrySpinner"
+            app:layout_constraintVertical_bias="0.127"
+            style="@style/spinner_style"/>
+
+
+    <Spinner
+            android:id="@+id/citySpinner"
+            style="@style/spinner_style"
+            android:layout_width="287dp"
+            android:layout_height="31dp"
+            android:visibility="invisible"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/provinceSpinner"
+            app:layout_constraintVertical_bias="0.149" />
+
+    <Button
+            android:id="@+id/btnSearch"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Search"
+            android:visibility="invisible"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.498"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/citySpinner"
+            app:layout_constraintVertical_bias="0.127" />
 
 </android.support.constraint.ConstraintLayout>
